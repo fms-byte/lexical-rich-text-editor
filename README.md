@@ -17,7 +17,7 @@ import { useHtmlContext } from "lexical-rich-text-editor/src/htmlContext";
 
 Step 3: Import HtmlProvider in your Root Layout component and wrap the ```{children}``` with it.
 ```javascript
-//./src/layout.tsx
+./src/layout.tsx
 import { HtmlProvider } from "lexical-rich-text-editor/src/htmlContext";
 ...
 ...
