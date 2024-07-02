@@ -1,6 +1,6 @@
 {
   "name": "lexical-rich-text-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A module of Lexical Editor which is developed to reuse.",
   "main": "src/index.ts",
   "types": "dist/index.d.ts",
@@ -44,6 +44,10 @@
     "type": "git",
     "url": "git+https://github.com/fms-byte/lexical-rich-text-editor.git"
   },
-  "keywords": ["lexical", "editor", "rich-text"],
+  "keywords": [
+    "lexical",
+    "editor",
+    "rich-text"
+  ],
   "homepage": "https://github.com/fms-byte/lexical-rich-text-editor#readme"
 }
