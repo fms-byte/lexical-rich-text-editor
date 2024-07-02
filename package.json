@@ -3,12 +3,13 @@
   "version": "1.0.1",
   "description": "A module of Lexical Editor which is developed to reuse.",
   "main": "src/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "farhan <fsh69711@gmail.com> (fsh69711@gmail.com)",
-  "license": "ISC",
+  "author": "Farhan <fsh69711@gmail.com> (fsh69711@gmail.com)",
+  "license": "MIT",
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.14.9",
@@ -38,5 +39,11 @@
     "prettier": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fms-byte/lexical-rich-text-editor.git"
+  },
+  "keywords": ["lexical", "editor", "rich-text"],
+  "homepage": "https://github.com/fms-byte/lexical-rich-text-editor#readme"
 }
