@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true, //if any problem occurs, remove it
+    "forceConsistentCasingInFileNames": true,
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -8,21 +8,15 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "commonjs",
+    "moduleResolution": "node10",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "outDir": "./dist",
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
