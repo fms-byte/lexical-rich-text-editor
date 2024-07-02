@@ -1,6 +1,6 @@
 # Lexical Rich Text Editor
 
-This module provides a reusable rich text editor component based on Lexical.
+This module provides a reusable rich text editor component based on [Lexical](https://lexical.dev/) by Meta.
 
 ## Installation
 
