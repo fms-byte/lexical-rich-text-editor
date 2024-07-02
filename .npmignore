@@ -1,4 +1,6 @@
-src
+/src/components
+/src/images
+/src/index.ts
 node_modules
 .DS_Store
 tsconfig.json
