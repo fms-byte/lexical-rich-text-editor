@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "description": "A module of Lexical Editor which is developed to reuse.",
   "main": "src/index.ts",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
