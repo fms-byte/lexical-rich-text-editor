@@ -1,6 +1,6 @@
 {
   "name": "lexical-rich-text-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A module of Lexical Editor which is developed to reuse.",
   "main": "src/index.ts",
   "types": "dist/index.d.ts",
