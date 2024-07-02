@@ -9,12 +9,9 @@ import { TableContext } from "./editor/plugins/TablePlugin";
 import { SharedAutocompleteContext } from "./editor/context/SharedAutocompleteContext";
 import Editor from "./editor";
 import { $generateNodesFromDOM } from "@lexical/html";
-import LexicalEditor, {
-  $getRoot,
-  $createParagraphNode,
-  $createTextNode,
-} from "lexical";
+import LexicalEditor, { $getRoot } from "lexical";
 import { CAN_USE_DOM } from "./editor/shared/canUseDOM";
+import { HtmlProvider } from "../htmlContext";
 
 interface LexicalEditorProps {
   initialHtml?: string;
@@ -46,17 +43,19 @@ const LexicalEditorComponent: React.FC<LexicalEditorProps> = ({
   };
 
   return (
-    <FlashMessageContext>
-      <LexicalComposer initialConfig={initialConfig}>
-        <SharedHistoryContext>
-          <TableContext>
-            <SharedAutocompleteContext>
-              <Editor />
-            </SharedAutocompleteContext>
-          </TableContext>
-        </SharedHistoryContext>
-      </LexicalComposer>
-    </FlashMessageContext>
+    <HtmlProvider>
+      <FlashMessageContext>
+        <LexicalComposer initialConfig={initialConfig}>
+          <SharedHistoryContext>
+            <TableContext>
+              <SharedAutocompleteContext>
+                <Editor />
+              </SharedAutocompleteContext>
+            </TableContext>
+          </SharedHistoryContext>
+        </LexicalComposer>
+      </FlashMessageContext>
+    </HtmlProvider>
   );
 };
 

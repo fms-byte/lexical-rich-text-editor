@@ -25116,7 +25116,7 @@ var LexicalEditorComponent = ({
       return editor;
     }
   };
-  return /* @__PURE__ */ import_react45.default.createElement(FlashMessageContext, null, /* @__PURE__ */ import_react45.default.createElement(import_LexicalComposer.LexicalComposer, { initialConfig }, /* @__PURE__ */ import_react45.default.createElement(SharedHistoryContext, null, /* @__PURE__ */ import_react45.default.createElement(TableContext, null, /* @__PURE__ */ import_react45.default.createElement(SharedAutocompleteContext, null, /* @__PURE__ */ import_react45.default.createElement(Editor, null))))));
+  return /* @__PURE__ */ import_react45.default.createElement(HtmlProvider, null, /* @__PURE__ */ import_react45.default.createElement(FlashMessageContext, null, /* @__PURE__ */ import_react45.default.createElement(import_LexicalComposer.LexicalComposer, { initialConfig }, /* @__PURE__ */ import_react45.default.createElement(SharedHistoryContext, null, /* @__PURE__ */ import_react45.default.createElement(TableContext, null, /* @__PURE__ */ import_react45.default.createElement(SharedAutocompleteContext, null, /* @__PURE__ */ import_react45.default.createElement(Editor, null)))))));
 };
 var components_default = LexicalEditorComponent;
 // Annotate the CommonJS export names for ESM import in node:
