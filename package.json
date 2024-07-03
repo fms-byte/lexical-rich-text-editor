@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "farhan <fsh69711@gmail.com> (fsh69711@gmail.com)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/katex": "^0.16.7",
     "@types/lodash-es": "^4.17.12",
