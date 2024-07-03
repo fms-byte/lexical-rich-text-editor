@@ -72,7 +72,7 @@ const YouTubePlugin_1 = __importDefault(require("./plugins/YouTubePlugin"));
 const ContentEditable_1 = __importDefault(require("./ui/ContentEditable"));
 const Placeholder_1 = __importDefault(require("./ui/Placeholder"));
 const HtmlPlugin_1 = __importDefault(require("./plugins/HtmlPlugin"));
-//import { useHtmlContext } from '@/app/htmlContext';
+import { useHtmlContext } from '../../htmlContext';
 function Editor() {
     const { historyState } = (0, SharedHistoryContext_1.useSharedHistoryContext)();
     const isEditable = (0, useLexicalEditable_1.default)();
@@ -81,7 +81,7 @@ function Editor() {
     const [floatingAnchorElem, setFloatingAnchorElem] = (0, react_1.useState)(null);
     const [isSmallWidthViewport, setIsSmallWidthViewport] = (0, react_1.useState)(false);
     const [isLinkEditMode, setIsLinkEditMode] = (0, react_1.useState)(false);
-    //const { setHtmlString } = useHtmlContext();
+    const { setHtmlString } = useHtmlContext();
     const onRef = (_floatingAnchorElem) => {
         if (_floatingAnchorElem !== null) {
             setFloatingAnchorElem(_floatingAnchorElem);
@@ -118,7 +118,7 @@ function Editor() {
             React.createElement("div", { className: "editor-scroller" },
                 React.createElement(LexicalRichTextPlugin_1.RichTextPlugin, { contentEditable: React.createElement("div", { className: "editor", ref: onRef },
                         React.createElement(ContentEditable_1.default, null)), placeholder: placeholder, ErrorBoundary: LexicalErrorBoundary_1.default }),
-                React.createElement(HtmlPlugin_1.default, { onHtmlChanged: (html) => console.log(html), 
+                React.createElement(HtmlPlugin_1.default, { onHtmlChanged: (html) => setHtmlString(html), 
                     //onHtmlChanged={setHtmlString}
                     initialHtml: "" })),
             React.createElement(CodeHighlightPlugin_1.default, null),

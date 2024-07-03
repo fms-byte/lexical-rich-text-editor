@@ -1,5 +1,6 @@
 "use client";
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import * as React from 'react';
+import { createContext, useContext, useState } from 'react';
 
 interface HtmlContextProps {
   htmlString: string;
@@ -16,12 +17,12 @@ export const useHtmlContext = () => {
   return context;
 };
 
-export const HtmlProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const HtmlProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [htmlString, setHtmlString] = useState<string>('');
 
-  return (
-    <HtmlContext.Provider value={{ htmlString, setHtmlString }}>
-      {children}
-    </HtmlContext.Provider>
+  return React.createElement(
+    HtmlContext.Provider,
+    { value: { htmlString, setHtmlString } },
+    children
   );
 };
