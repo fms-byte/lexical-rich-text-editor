@@ -48,7 +48,6 @@ const react_1 = require("react");
 const React = __importStar(require("react"));
 const ReactDOM = __importStar(require("react-dom"));
 const useModal_1 = __importDefault(require("../../hooks/useModal"));
-const cat_typing_gif_1 = __importDefault(require("@/public/images/cat-typing.gif"));
 const AutoEmbedPlugin_1 = require("../AutoEmbedPlugin");
 const CollapsiblePlugin_1 = require("../CollapsiblePlugin");
 const EquationsPlugin_1 = require("../EquationsPlugin");
@@ -182,48 +181,15 @@ function getBaseOptions(editor, showModal) {
             keywords: ['horizontal rule', 'divider', 'hr'],
             onSelect: () => editor.dispatchCommand(LexicalHorizontalRuleNode_1.INSERT_HORIZONTAL_RULE_COMMAND, undefined),
         }),
-        new ComponentPickerOption('Page Break', {
-            icon: React.createElement("i", { className: "icon page-break" }),
-            keywords: ['page break', 'divider'],
-            onSelect: () => editor.dispatchCommand(PageBreakPlugin_1.INSERT_PAGE_BREAK, undefined),
-        }),
-        new ComponentPickerOption('Excalidraw', {
-            icon: React.createElement("i", { className: "icon diagram-2" }),
-            keywords: ['excalidraw', 'diagram', 'drawing'],
-            onSelect: () => editor.dispatchCommand(ExcalidrawPlugin_1.INSERT_EXCALIDRAW_COMMAND, undefined),
-        }),
-        new ComponentPickerOption('Poll', {
-            icon: React.createElement("i", { className: "icon poll" }),
-            keywords: ['poll', 'vote'],
-            onSelect: () => showModal('Insert Poll', (onClose) => (React.createElement(PollPlugin_1.InsertPollDialog, { activeEditor: editor, onClose: onClose }))),
-        }),
         ...AutoEmbedPlugin_1.EmbedConfigs.map((embedConfig) => new ComponentPickerOption(`Embed ${embedConfig.contentName}`, {
             icon: embedConfig.icon,
             keywords: [...embedConfig.keywords, 'embed'],
             onSelect: () => editor.dispatchCommand(LexicalAutoEmbedPlugin_1.INSERT_EMBED_COMMAND, embedConfig.type),
         })),
-        new ComponentPickerOption('Equation', {
-            icon: React.createElement("i", { className: "icon equation" }),
-            keywords: ['equation', 'latex', 'math'],
-            onSelect: () => showModal('Insert Equation', (onClose) => (React.createElement(EquationsPlugin_1.InsertEquationDialog, { activeEditor: editor, onClose: onClose }))),
-        }),
-        new ComponentPickerOption('GIF', {
-            icon: React.createElement("i", { className: "icon gif" }),
-            keywords: ['gif', 'animate', 'image', 'file'],
-            onSelect: () => editor.dispatchCommand(ImagesPlugin_1.INSERT_IMAGE_COMMAND, {
-                altText: 'Cat typing on a laptop',
-                src: cat_typing_gif_1.default.src,
-            }),
-        }),
         new ComponentPickerOption('Image', {
             icon: React.createElement("i", { className: "icon image" }),
             keywords: ['image', 'photo', 'picture', 'file'],
             onSelect: () => showModal('Insert Image', (onClose) => (React.createElement(ImagesPlugin_1.InsertImageDialog, { activeEditor: editor, onClose: onClose }))),
-        }),
-        new ComponentPickerOption('Collapsible', {
-            icon: React.createElement("i", { className: "icon caret-right" }),
-            keywords: ['collapse', 'collapsible', 'toggle'],
-            onSelect: () => editor.dispatchCommand(CollapsiblePlugin_1.INSERT_COLLAPSIBLE_COMMAND, undefined),
         }),
         new ComponentPickerOption('Columns Layout', {
             icon: React.createElement("i", { className: "icon columns" }),
