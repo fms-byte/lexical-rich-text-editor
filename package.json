@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && cpx 'src/**/*.css' dist",
+    "build": "tsc && cpx 'src/**/*.css' dist && cpx 'src/images/**/*' dist/images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "farhan <fsh69711@gmail.com> (fsh69711@gmail.com)",
