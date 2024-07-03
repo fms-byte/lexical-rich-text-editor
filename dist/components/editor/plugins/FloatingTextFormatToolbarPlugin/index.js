@@ -43,7 +43,6 @@ const react_dom_1 = require("react-dom");
 const getDOMRangeRect_1 = require("../../utils/getDOMRangeRect");
 const getSelectedNode_1 = require("../../utils/getSelectedNode");
 const setFloatingElemPosition_1 = require("../../utils/setFloatingElemPosition");
-const CommentPlugin_1 = require("../CommentPlugin");
 function TextFormatFloatingToolbar({ editor, anchorElem, isLink, isBold, isItalic, isUnderline, isCode, isStrikethrough, isSubscript, isSuperscript, setIsLinkEditMode, }) {
     const popupCharStylesEditorRef = (0, react_1.useRef)(null);
     const insertLink = (0, react_1.useCallback)(() => {
@@ -56,9 +55,6 @@ function TextFormatFloatingToolbar({ editor, anchorElem, isLink, isBold, isItali
             editor.dispatchCommand(link_1.TOGGLE_LINK_COMMAND, null);
         }
     }, [editor, isLink, setIsLinkEditMode]);
-    const insertComment = () => {
-        editor.dispatchCommand(CommentPlugin_1.INSERT_INLINE_COMMAND, undefined);
-    };
     function mouseMoveListener(e) {
         if (popupCharStylesEditorRef?.current &&
             (e.buttons === 1 || e.buttons === 3)) {
