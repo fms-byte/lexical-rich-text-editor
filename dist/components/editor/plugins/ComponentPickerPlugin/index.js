@@ -49,13 +49,8 @@ const React = __importStar(require("react"));
 const ReactDOM = __importStar(require("react-dom"));
 const useModal_1 = __importDefault(require("../../hooks/useModal"));
 const AutoEmbedPlugin_1 = require("../AutoEmbedPlugin");
-const CollapsiblePlugin_1 = require("../CollapsiblePlugin");
-const EquationsPlugin_1 = require("../EquationsPlugin");
-const ExcalidrawPlugin_1 = require("../ExcalidrawPlugin");
 const ImagesPlugin_1 = require("../ImagesPlugin");
 const InsertLayoutDialog_1 = __importDefault(require("../LayoutPlugin/InsertLayoutDialog"));
-const PageBreakPlugin_1 = require("../PageBreakPlugin");
-const PollPlugin_1 = require("../PollPlugin");
 const TablePlugin_1 = require("../TablePlugin");
 class ComponentPickerOption extends LexicalTypeaheadMenuPlugin_1.MenuOption {
     // What shows up in the editor
